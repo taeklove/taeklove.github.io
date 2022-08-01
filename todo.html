@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Vue Study</title>
+</head>
+
+<body>
+내 할일 ...
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+
+<script>
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import vuetify from './plugins/vuetify'
+//import axios from 'axios'
+
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+
+
+//Vue.prototype.$axios = axios;
+//한글
+Vue.use(BootstrapVue)
+//Vue.use(ㄹ)
+//import "@mdi/font/css/materialdesignicons.css"
+//import Vuetify from "vuetify"
+//import "vuetify/dist/vuetify.min.css"
+
+
+//Vue.use(Vuetify, {
+//  iconfont: "mdi"
+//});
+
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  store,
+  vuetify,
+  render: h => h(App)
+}).$mount('#app')
+
+</script>
+
+</body>
+
+</html>
